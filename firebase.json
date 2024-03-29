@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "kalina--devops",
     "public": "build",
     "ignore": [
       "firebase.json",
