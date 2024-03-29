@@ -114,11 +114,10 @@ jobs:
           key: ${{ runner.os }}-build-${{ github.run_id }}
 
       - name: Deploy to Firebase
-        uses: lowply/deploy-firebase@v0.0.5
-        with:
-          args: deploy --only hosting
+        run: firebase deploy --only hosting
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
           FIREBASE_PROJECT: kalina--devops
+
 
 
