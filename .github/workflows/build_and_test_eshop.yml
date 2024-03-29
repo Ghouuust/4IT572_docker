@@ -60,7 +60,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: actions/cache@v4.0.2
         with:
-          patch: |
+          path: |
             ~/.npm
             ./node_modules
             ./build
